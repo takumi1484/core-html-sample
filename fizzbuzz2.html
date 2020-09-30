@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <title>title</title>
+</head>
+<body>
+<label>
+    fizz
+    <input type="text" id="input_value1">
+</label>
+<label>
+    buzz
+    <input type="text" id="input_value2">
+</label>
+<input type="button" value="Done" onclick="test()">
+<div id="output_value"></div>
+<script>
+    function test(){
+        let inputHtml1 = document.getElementById("input_value1").value
+        let inputHtml2 = document.getElementById("input_value2").value
+        let output_text = ""
+        for (let i = 1; i < 100; i++) {
+            if(i%inputHtml1 === 0 && i%inputHtml2 === 0){
+                output_text += '<li>fizzbuzz</li>';
+            }else if(i%inputHtml1 === 0){
+                output_text += '<li>fizz</li>';
+            }else if(i%inputHtml2 === 0){
+                output_text += '<li>buzz</li>';
+            }else{
+                output_text += '<li>'+i+'</li>';
+            }
+        }
+        let outputHtml = document.getElementById('output_value')
+        outputHtml.innerHTML = output_text
+    }
+</script>
+</body>
+</html>

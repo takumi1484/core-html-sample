@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+    <input type="text" id="input_value" placeholder="値を入力">
+    <input type="button" value="Done" onclick="test()">
+    <div id="output_value"></div>
+    <script>
+        function test(){
+            let inputHtml = document.getElementById("input_value").value
+            let outputHtml = document.getElementById('output_value')
+            outputHtml.innerHTML = '<h2>'+inputHtml+'</h2>'
+        }
+    </script>
+</body>
+</html>
+
+
